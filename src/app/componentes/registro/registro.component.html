@@ -1,0 +1,17 @@
+<body>
+    <form [formGroup]="registroForm" class="modal-content animate" (ngSubmit)="Registrar()" >
+      <div class="container">
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Ingresa tu correo" name="email" [formControl]="email" required>
+  
+        <label><b>Clave</b></label>
+        <input type="password" placeholder="Aca la clave" name="psw"  [formControl]="clave  " required>
+  
+        <label><b>Repita la clave</b></label>
+        <input type="password" placeholder="Aca repeti la misma clave  de arriba"  [formControl]="copiaClave" name="psw-repeat" required>
+        <div>
+          <button type="submit" class="signupbtn" [disabled]="!registroForm.valid">Registrarme</button>
+        </div>
+      </div>
+    </form>
+</body>
